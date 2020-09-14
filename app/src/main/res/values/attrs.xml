@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="bkgChipChecked" format="color"/>
+    <attr name="bkgDivider" format="color"/>
+    <attr name="bkgElevatedElement" format="color"/>
+    <attr name="bkgScreen" format="color"/>
+    <attr name="bkgShimmerHighLight" format="color"/>
+    <attr name="bkgToolbar" format="color"/>
+    <attr name="bkgChipUnchecked" format="color"/>
+    <attr name="txtChipChecked" format="color"/>
+    <attr name="txtChipUnchecked" format="color"/>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorAccent">#ffffff</color>
+
+    <!--Black Palette-->
+    <color name="black">#000000</color>
+    <color name="paleBlack">#121212</color>
+    <color name="lightBlack">#202324</color>
+    <color name="superLightBlack">#4d4d4d</color>
+
+    <!--Blue Palette-->
+    <color name="darkBlue">#3700B3</color>
+    <color name="darkLinkBlue">#0000EE</color>
+    <color name="lightLinkBlue">#72bcd4</color>
+
+    <!-- Gray Palette -->
+    <color name="gray">#A0A0A0</color>
+
+    <!--White Palette-->
+    <color name="white">#ffffff</color>
+    <color name="white20">#40ffffff</color>
+    <color name="paleWhite">#f1f1f1</color>
+
+    <!--Yellow Palette-->
+    <color name="paleYellow">#defdd430</color>
+    <color name="yellow">#fdd430</color>
+</resources>

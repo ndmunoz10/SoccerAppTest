@@ -1,0 +1,68 @@
+<resources>
+    <style name="LightMode" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="bkgChipChecked">@color/black</item>
+        <item name="bkgChipUnchecked">@color/paleWhite</item>
+        <item name="bkgDivider">@color/paleBlack</item>
+        <item name="bkgElevatedElement">@color/paleWhite</item>
+        <item name="bkgScreen">@color/white</item>
+        <item name="bkgShimmerHighLight">@color/gray</item>
+        <item name="bkgToolbar">@color/colorPrimary</item>
+        <item name="txtChipChecked">@color/white</item>
+        <item name="txtChipUnchecked">@color/black</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="TeamDescriptionTitle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="TeamDescriptionSubtitle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+    </style>
+
+    <style name="TeamDescriptionContent">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+    </style>
+
+    <style name="TeamDescriptionLinkContent">
+        <item name="android:textColor">@color/darkLinkBlue</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+    </style>
+
+    <style name="TeamItemTitle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <style name="TeamItemSubTitle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+    </style>
+
+    <style name="TeamListToolbar">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+
+    <style name="TeamListChipStyle" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@drawable/team_list_chip_background</item>
+        <item name="android:textColor">@drawable/team_list_chip_text_color</item>
+    </style>
+
+    <style name="TeamListChipTextAppearance">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+    </style>
+
+</resources>

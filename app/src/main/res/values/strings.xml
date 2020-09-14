@@ -1,0 +1,14 @@
+<resources>
+    <string name="team_list">Team List</string>
+    <string name="name_label">Name:</string>
+    <string name="stadium_label">Stadium:</string>
+    <string name="premier_league">Premier League</string>
+    <string name="bundesliga">Bundesliga</string>
+    <string name="founded_on_x">Founded on %d</string>
+    <string name="next_events">Next Events</string>
+    <string name="history_label">History</string>
+    <string name="watch_on_x">Watch on: %s</string>
+    <string name="league_x">League: %s</string>
+    <string name="additional_info">Additional Info</string>
+    <string name="underlined_text"><u>%s</u></string>
+</resources>

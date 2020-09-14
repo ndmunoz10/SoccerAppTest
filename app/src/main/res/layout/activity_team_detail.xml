@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/tv_team_name"
+            style="@style/TeamDescriptionTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            tools:text="Real Madrid"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_team_jersey"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_team_name"
+            app:layout_constraintStart_toStartOf="@id/tv_team_name"
+            tools:src="@drawable/ball_placeholder"/>
+
+        <TextView
+            android:id="@+id/tv_team_foundation_year"
+            style="@style/TeamDescriptionContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="@id/iv_team_jersey"
+            app:layout_constraintBottom_toBottomOf="@id/iv_team_jersey"
+            app:layout_constraintStart_toEndOf="@id/iv_team_jersey"
+            app:layout_constraintEnd_toStartOf="@id/iv_team_badge"
+            tools:text="@string/founded_on_x"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_team_badge"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:transitionName="team_badge_transition"
+            app:layout_constraintEnd_toEndOf="@id/tv_team_name"
+            app:layout_constraintTop_toTopOf="@id/iv_team_jersey"
+            app:layout_constraintBottom_toBottomOf="@id/iv_team_jersey"
+            tools:src="@drawable/ball_placeholder"/>
+
+        <View
+            android:id="@+id/v_team_detail_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="?attr/bkgDivider"
+            app:layout_constraintTop_toBottomOf="@id/iv_team_jersey"
+            app:layout_constraintStart_toStartOf="@+id/tv_team_name"
+            app:layout_constraintEnd_toEndOf="@id/tv_team_name"/>
+
+        <TextView
+            android:id="@+id/tv_history_subtitle"
+            style="@style/TeamDescriptionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/history_label"
+            app:layout_constraintTop_toBottomOf="@id/v_team_detail_divider"
+            app:layout_constraintStart_toStartOf="@id/v_team_detail_divider"/>
+
+        <TextView
+            android:id="@+id/tv_team_description"
+            style="@style/TeamDescriptionContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/tv_team_name"
+            app:layout_constraintEnd_toEndOf="@id/tv_team_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_history_subtitle"
+            tools:text="Deportivo Alavés, S.A.D., usually abbreviated to Alavés, is a Spanish football club based in Vitoria-Gasteiz, Álava, in the autonomous community of the Basque Country. Founded on January 23rd, 1921 as Sport Friends Club, it plays in the highest football category of The Liga Nacional de Fútbol Profesional, La Liga, since the 2016–17 season.\r\n\r\nIt is recognized as the least successful team in the Basque Country following Athletic Club of Bilbao and Real Sociedad de Futbol of San Sebastián. Its biggest success was in 2001 when, in the year of its debut in European competition, it was one of the finalists in the 2001 UEFA Cup Final against Liverpool, being defeated 5–4 by golden goal. In 2017, the club reached the final of the Copa del Rey, losing out 3–1 to Barcelona.\r\n\r\nThe team's home kit is blue and white-striped shirt, blue shorts and white socks. It holds home matches at the 19,800-seater Mendizorrotza Stadium and uses other facilities located in Ibaia dedicated to training."/>
+
+        <TextView
+            android:id="@+id/tv_event_title"
+            style="@style/TeamDescriptionTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/next_events"
+            app:layout_constraintTop_toBottomOf="@id/tv_team_description"
+            app:layout_constraintStart_toStartOf="@id/tv_team_description"
+            app:layout_constraintEnd_toEndOf="@id/tv_team_description"/>
+
+        <include
+            android:id="@+id/include_shimmer_container"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            layout="@layout/shimmer_loading_layout"
+            app:layout_constraintStart_toStartOf="@id/tv_team_description"
+            app:layout_constraintEnd_toEndOf="@id/tv_team_description"
+            app:layout_constraintTop_toBottomOf="@id/tv_event_title"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_events"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:visibility="invisible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="@id/tv_team_description"
+            app:layout_constraintEnd_toEndOf="@id/tv_team_description"
+            app:layout_constraintTop_toBottomOf="@id/tv_event_title"
+            tools:listitem="@layout/event_item"/>
+
+        <TextView
+            android:id="@+id/tv_additional_info_title"
+            style="@style/TeamDescriptionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/additional_info"
+            app:layout_constraintTop_toBottomOf="@id/rv_events"
+            app:layout_constraintStart_toStartOf="@id/rv_events"/>
+
+        <TextView
+            android:id="@+id/tv_website"
+            style="@style/TeamDescriptionLinkContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_additional_info_title"
+            app:layout_constraintStart_toStartOf="@id/tv_additional_info_title"
+            tools:text="@string/underlined_text"/>
+
+        <TextView
+            android:id="@+id/tv_facebook"
+            style="@style/TeamDescriptionLinkContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_website"
+            app:layout_constraintStart_toStartOf="@id/tv_website"
+            tools:text="@string/underlined_text"/>
+
+        <TextView
+            android:id="@+id/tv_twitter"
+            style="@style/TeamDescriptionLinkContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_facebook"
+            app:layout_constraintStart_toStartOf="@id/tv_facebook"
+            tools:text="@string/underlined_text"/>
+
+        <TextView
+            android:id="@+id/tv_instagram"
+            style="@style/TeamDescriptionLinkContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_twitter"
+            app:layout_constraintStart_toStartOf="@id/tv_twitter"
+            tools:text="@string/underlined_text"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

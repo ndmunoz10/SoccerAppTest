@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="?attr/selectableItemBackground"
+    app:cardBackgroundColor="?attr/bkgElevatedElement"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="16dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_team_badge"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:transitionName="team_badge_transition"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ball_placeholder" />
+
+        <TextView
+            android:id="@+id/tv_team_name_label"
+            style="@style/TeamItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/name_label"
+            app:layout_constraintStart_toEndOf="@id/iv_team_badge"
+            app:layout_constraintTop_toTopOf="@id/iv_team_badge"/>
+
+        <TextView
+            android:id="@+id/tv_team_name_value"
+            style="@style/TeamItemSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/tv_team_name_label"
+            app:layout_constraintTop_toTopOf="@id/tv_team_name_label"
+            app:layout_constraintBottom_toBottomOf="@id/tv_team_name_label"
+            tools:text="Real Madrid"/>
+
+        <TextView
+            android:id="@+id/tv_stadium_points_label"
+            style="@style/TeamItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stadium_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_team_name_label"
+            app:layout_constraintStart_toStartOf="@id/tv_team_name_label"/>
+
+        <TextView
+            android:id="@+id/tv_stadium_value"
+            style="@style/TeamItemSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/tv_stadium_points_label"
+            app:layout_constraintTop_toTopOf="@id/tv_stadium_points_label"
+            app:layout_constraintBottom_toBottomOf="@id/tv_stadium_points_label"
+            tools:text="10000"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
